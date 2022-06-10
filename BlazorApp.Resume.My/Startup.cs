@@ -28,7 +28,6 @@ namespace BlazorApp.Resume.My
 			
 			services.AddResumeServices();
 			services.AddBrowserDetection();
-			//services.AddAuthentication("MyResume.Application").AddCookie();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,8 +48,6 @@ namespace BlazorApp.Resume.My
 			app.UseStaticFiles();
 
 			app.UseRouting();
-			//app.UseAuthentication();
-			//app.UseAuthorization();
 
 			app.UseEndpoints(endpoints =>
 			{
