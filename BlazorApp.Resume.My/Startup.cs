@@ -25,9 +25,7 @@ namespace BlazorApp.Resume.My
 			services.AddRazorPages();
 			services.AddServerSideBlazor();
 			services.AddDbContext<KEODbContext>(o => o.UseSqlite(Configuration.GetConnectionString("InMemmory-Connection"))); // For production
-			//services.AddDbContextPool<KEODbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Internal-Connection"))); // For local
-			//services.AddIdentity<AppUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<KEODbContext>();
-
+			
 			services.AddResumeServices();
 			services.AddBrowserDetection();
 			//services.AddAuthentication("MyResume.Application").AddCookie();
